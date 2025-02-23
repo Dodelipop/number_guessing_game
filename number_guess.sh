@@ -2,7 +2,13 @@
 
 PSQL="psql --username=freecodecamp --dbname=number_guess -t --no-align -c"
 
-# fix: Correct the greeting for returning users, including the number of games and best game
+# refactor: Move database interaction to a function to reduce code duplication
+get_user_data() {
+  local USERNAME=$1
+  local USER_ID=$($PSQL "SELECT user_id FROM public.players WHERE username='$USERNAME'")
+  echo $USER_ID
+}
+
 echo -e "\nEnter your username:"
 read USERNAME
 
@@ -11,7 +17,7 @@ if [[ -z $USERNAME ]]; then
   exit 1
 fi
 
-USER_ID=$($PSQL "SELECT user_id FROM public.players WHERE username='$USERNAME'")
+USER_ID=$(get_user_data $USERNAME)
 
 if [[ -z $USER_ID ]]; then
   echo -e "\nWelcome, $USERNAME! It looks like this is your first time here."
@@ -25,6 +31,5 @@ else
     BEST_GAME="N/A"
   fi
 
-  # Fix: Properly greet users with the correct number of games played and best game
   echo -e "\nWelcome back, $USERNAME! You have played $GAMES_PLAYED games, and your best game took $BEST_GAME guesses."
 fi
