@@ -2,22 +2,16 @@
 
 PSQL="psql --username=freecodecamp --dbname=number_guess -t --no-align -c"
 
-# refactor: Move database interaction to a function to reduce code duplication
-get_user_data() {
-  local USERNAME=$1
-  local USER_ID=$($PSQL "SELECT user_id FROM public.players WHERE username='$USERNAME'")
-  echo $USER_ID
-}
-
 echo -e "\nEnter your username:"
 read USERNAME
 
+# chore: Remove redundant and unused variables (e.g., unused database query)
 if [[ -z $USERNAME ]]; then
   echo "Username cannot be empty. Exiting..."
   exit 1
 fi
 
-USER_ID=$(get_user_data $USERNAME)
+USER_ID=$($PSQL "SELECT user_id FROM public.players WHERE username='$USERNAME'")
 
 if [[ -z $USER_ID ]]; then
   echo -e "\nWelcome, $USERNAME! It looks like this is your first time here."
