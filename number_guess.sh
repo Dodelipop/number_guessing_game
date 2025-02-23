@@ -61,3 +61,5 @@ INSERT_GAME_RESULT=$($PSQL "INSERT INTO public.games(user_id, secret_number, num
 
 # Print the success message
 echo -e "\nYou guessed it in $GUESS_COUNT tries. The secret number was $SECRET_NUMBER. Nice job!"
+
+# This is a harmless comment to trigger a commit
