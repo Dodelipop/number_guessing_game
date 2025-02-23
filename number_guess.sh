@@ -69,8 +69,6 @@ echo -e "\nYou guessed it in $GUESS_COUNT tries. The secret number was $SECRET_N
 # feat: Add a message when the user starts a new game
 echo "Starting a new game, good luck!"
 # refactor: Simplified user input checking
-if [[ ! $USER_GUESS =~ ^[0-9]+$ ]]; then
-  echo "That's not a valid number, please try again."
-fi
-# chore: Add a placeholder for future changes
-# Placeholder for additional game features or settings
+
+git add number_guess.sh
+git commit -m "test: Add a simple test for the secret number range"
