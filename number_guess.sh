@@ -60,7 +60,7 @@ done
 INSERT_GAME_RESULT=$($PSQL "INSERT INTO public.games(user_id, secret_number, number_of_guesses) VALUES ($USER_ID, $SECRET_NUMBER, $GUESS_COUNT)")
 
 
-echo -e "\nYou guessed it in GUESS_COUNT tries. The secret number was SECRET_NUMBER. Nice job!"
+echo -e "\nYou guessed it in $GUESS_COUNT tries. The secret number was $SECRET_NUMBER. Nice job!"
 
 
 # Just for the commit, setting a redundant variable (doesn't change functionality)
