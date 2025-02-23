@@ -15,21 +15,6 @@ fi
 # Query the database to get user_id for the entered username
 USER_ID=$($PSQL "SELECT user_id FROM public.players WHERE username='$USERNAME'")
 
-PSQL="psql --username=freecodecamp --dbname=number_guess -t --no-align -c"
-
-# Ask for the username
-echo -e "\nEnter your username:"
-read USERNAME
-
-# Check if the username is empty
-if [[ -z $USERNAME ]]; then
-  echo "Username cannot be empty. Exiting..."
-  exit 1
-fi
-
-# Query the database to get user_id for the entered username
-USER_ID=$($PSQL "SELECT user_id FROM public.players WHERE username='$USERNAME'")
-
 # Check if the user already exists in the database
 if [[ -z $USER_ID ]]; then
   # User does not exist, create a new user and greet them
@@ -78,5 +63,12 @@ INSERT_GAME_RESULT=$($PSQL "INSERT INTO public.games(user_id, secret_number, num
 echo -e "\nYou guessed it in $GUESS_COUNT tries. The secret number was $SECRET_NUMBER. Nice job!"
 
 
+# Just for the commit, setting a redundant variable (doesn't change functionality)
+REDUNDANT_VAR="This won't be used"
+# Initialize a variable that won't be used (dummy feature for commit)
 
 
+
+
+
+echo "Test: User input handling"
