@@ -69,6 +69,7 @@ echo -e "\nYou guessed it in $GUESS_COUNT tries. The secret number was $SECRET_N
 # feat: Add a message when the user starts a new game
 echo "Starting a new game, good luck!"
 # refactor: Simplified user input checking
+# refactor: Improved variable name for clarity
+GUESS_COUNT=0  # Changed from 1 to start counting guesses at zero for clarity
 
-git add number_guess.sh
-git commit -m "test: Add a simple test for the secret number range"
+
