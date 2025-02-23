@@ -63,9 +63,7 @@ INSERT_GAME_RESULT=$($PSQL "INSERT INTO public.games(user_id, secret_number, num
 echo -e "\nYou guessed it in $GUESS_COUNT tries. The secret number was $SECRET_NUMBER. Nice job!"
 
 
-# Just for the commit, setting a redundant variable (doesn't change functionality)
-REDUNDANT_VAR="This won't be used"
-# Initialize a variable that won't be used (dummy feature for commit)
+
 
 
 
