@@ -39,3 +39,5 @@ REDUNDANT_VAR="This won't be used"
 UNUSED_VAR="This will not be used"
 # Renaming variable for no reason, purely for the commit
 TEMP_VAR="This variable name is temporary"
+# This is a dummy comment added to trigger commit message
+# Chore: Add a comment
