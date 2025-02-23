@@ -72,3 +72,5 @@ echo "Starting a new game, good luck!"
 if [[ ! $USER_GUESS =~ ^[0-9]+$ ]]; then
   echo "That's not a valid number, please try again."
 fi
+# chore: Add a placeholder for future changes
+# Placeholder for additional game features or settings
