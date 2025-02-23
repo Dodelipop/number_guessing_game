@@ -71,4 +71,4 @@ REDUNDANT_VAR="This won't be used"
 
 
 
-echo "Test: User input handling"
+
