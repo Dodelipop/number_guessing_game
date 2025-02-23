@@ -71,5 +71,7 @@ echo "Starting a new game, good luck!"
 # refactor: Simplified user input checking
 # refactor: Improved variable name for clarity
 GUESS_COUNT=0  # Changed from 1 to start counting guesses at zero for clarity
+# test: Added a test print statement for debugging
+echo "Testing if the script runs correctly."
 
 
