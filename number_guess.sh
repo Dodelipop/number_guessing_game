@@ -5,7 +5,6 @@ PSQL="psql --username=freecodecamp --dbname=number_guess -t --no-align -c"
 echo -e "\nEnter your username:"
 read USERNAME
 
-# chore: Remove redundant and unused variables (e.g., unused database query)
 if [[ -z $USERNAME ]]; then
   echo "Username cannot be empty. Exiting..."
   exit 1
@@ -27,3 +26,12 @@ else
 
   echo -e "\nWelcome back, $USERNAME! You have played $GAMES_PLAYED games, and your best game took $BEST_GAME guesses."
 fi
+
+# test: Add validation to ensure the user input is a valid integer
+echo -e "\nGuess the secret number between 1 and 1000:"
+read USER_GUESS
+
+until [[ $USER_GUESS =~ ^[0-9]+$ && $USER_GUESS -gt 0 && $USER_GUESS -le 1000 ]]; do
+  echo -e "Please enter a valid integer between 1 and 1000:"
+  read USER_GUESS
+done
