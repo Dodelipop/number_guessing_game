@@ -48,7 +48,7 @@ until [[ $USER_GUESS -eq $SECRET_NUMBER ]]; do
   if [[ ! $USER_GUESS =~ ^[0-9]+$ ]]; then
     echo -e "\nThat is not an integer, guess again:"
   elif [[ $USER_GUESS -lt $SECRET_NUMBER ]]; then
-    echo "It's higher than that, guess again:"
+    echo "It's higher than that, guess again correctly:"
   else
     echo "It's lower than that, guess again:"
   fi
