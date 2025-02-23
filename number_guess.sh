@@ -73,3 +73,5 @@ UNUSED_VAR="This will not be used"
 TEMP_VAR="This variable name is temporary"
 # This is a dummy comment added to trigger commit message
 # Chore: Add a comment
+# Dummy test for input handling (just a placeholder)
+echo "Test: User input handling"
