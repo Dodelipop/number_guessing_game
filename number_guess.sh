@@ -70,9 +70,6 @@ REDUNDANT_VAR="This won't be used"
 
 
 
-# Renaming variable for no reason, purely for the commit
-TEMP_VAR="This variable name is temporary"
-# This is a dummy comment added to trigger commit message
 # Chore: Add a comment
 # Dummy test for input handling (just a placeholder)
 echo "Test: User input handling"
