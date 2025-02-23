@@ -70,6 +70,5 @@ REDUNDANT_VAR="This won't be used"
 
 
 
-# Chore: Add a comment
-# Dummy test for input handling (just a placeholder)
+
 echo "Test: User input handling"
