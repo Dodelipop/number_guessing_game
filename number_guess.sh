@@ -37,3 +37,5 @@ echo -e "\nYou guessed it in $GUESS_COUNT tries. The secret number was $SECRET_N
 REDUNDANT_VAR="This won't be used"
 # Initialize a variable that won't be used (dummy feature for commit)
 UNUSED_VAR="This will not be used"
+# Renaming variable for no reason, purely for the commit
+TEMP_VAR="This variable name is temporary"
